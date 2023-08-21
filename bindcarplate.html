@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>麦德龙停车中台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="images/list.png">
+	<link rel="icon" type="image/jpg" href="images/list.png">
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+					<div class="title_top">
+						<span>请绑定车牌号</span>
+					</div>
+    				<div class="car_input">
+						<ul class="clearfix ul_input">
+							<li class="input_pro"><span></span></li>
+							<li class="input_pp input_zim"><span></span></li>
+							<li class="input_pp"><span></span></li>
+							<li class="input_pp"><span></span></li>
+							<li class="input_pp"><span></span></li>
+							<li class="input_pp"><span></span></li>
+							<li class="input_pp"><span></span></li>
+							<li class="input_pp"><span>
+								<b style="width: 1rem;
+    height: 0.3rem;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAAAcCAYAAADWZ2dHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkNTFhYzJlYi1mOWNhLWVmNDYtYjIxZS04ZTBkYTQ1ZWNhMDciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkFCMDdBQkM5QzNEMTFFOEIxRTBBNEJDODhDRDdFQkMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkFCMDdBQkI5QzNEMTFFOEIxRTBBNEJDODhDRDdFQkMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NGJiZDUzNzktY2E0OC00MjRhLWE1NjAtZDMzNjdjZWEzMzgzIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6N2U1OGRjYzQtMjM3My0xMWU4LTk1OWYtZTA4MmNmMjVmYTkyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+mkWcKAAABWRJREFUeNrcmV1MXFUQxw8fYsMKlQrBGAitWpvSR0t1/UCfgNaYGLUkNqImkOiTprw10UCjSd/gVRM2MfIG6IsffPgkNW5j7ONum34YCYTYgK1AIZUGdH5nz2zv3r1376YxTdlJJrt7zr33zH/mPzPnni1rSr1lIqRM9EXRV0SfF31StE60ytw/sil6Q/SK6C+i34meFf23ILAC4MtF3xM95QDvNMERZ0S/FN0OAxgk+0TPiSZ2KHDj7E44HPuKBf+y6K+ibaY0pM3haY8C3yE6LVpvSkvA86NoZxj4A6ITYYWsb89R0/RAw12vXltRHXj/oV0tdu4eSJXDd0AHKt1nheioaE0h4/sb3jD9i5/njR/atVeA1Zt4davprDlsBq99Zcb/ns25buixD8zq1kbe/QONPWZ4+RuTXE8HrjvwaI9Zk/uGlr62v48/3G6O726PRNo991nQ8EMOZ1x0S8G/G5Tj8VirGWv5OGeMxb0LMI/hq9sbJn1rzvQtDOUBwSE4Jn7lQxvpsZZP7HecYaP/YIt1XqvM8b22Ima6fj9l5xJ/TZmR5n7LGpzaLJ8Lt5fN+Mod556sfz1vLKIG0MUStDr6+KWgqk5UMRyjZtbO33GAeF4XAnxz+kToSgrW6xSiCYi++SF7P2AXbi9Z56VEkxvprGPUDp4xs/Zbdmzk+qRlXIZV71snpf6Zs79Tt/7IuT+kDT5V6apgYDvjAcn1C2aw8R0zLLTjtzojuZi2zIjKc4zW6KDNVQ2mtjyWZQRy+tpoDlsYn/YAZd3uuU8zaSOpl3HqXjPS1G+Bzm8umY6ap60yHsS+gDbYDvhjYVdANYxlAQpecuOC6d3TZSPjBR7kBPU+VIWSGRDrNrIKMKzQQXPYxPz042dsvvtriK7hz21/mhaQY4B/Lmw2HjuYLS4dYuxJ8ToeJS9RCpVGVaOxur1uI0E0U1tzlsoUtTzDhaKn/xy1z8eh8eqDWYeTAhrx/sUvbIQRvwNYzw9WU6EIiQN+f9gsi+mCWvy8ntaI6xjz54QdWpkz1I9ZxRnemoHzlPJKfwTgffOT2d84G8rDBm8q/A+RtzlfV4j23a66a4/WnJsXI5XOUQLdvTlIlKnuyJvy/AlxsKZDkDAXv/xRHjNISbVHhbEipa7yXuwu/PTEQFJD29xMRSxvz+CneKbmpO0cqcT9es2zLmVgHWP67CipdK+CjUGTeJiW0r37JTO+MWt7PNSj2rMIdI2oqoH0JFpqsG50aH2AJ8ozPnozTnsk+qQQ9QLbuBZ7NPpjYhOOVWZEyA3AXw4Dr1UZaqZczkL3KanALEoPL4b6hSKPQHuiGkZ9nI+TAcWa3MvnoDjEXwcojp2yQSrCAZfY2ycLXUFxmvBQkApM1DGIDpAukKsqOIzOoMrewV/5vcBxrld6H+kyietTNhALttYsSYc4mpcajHuZECFJwH8f3upaM1Fb+SlnPCGpsCItze7efHOFCp6qPyq15dU5RZbn+rfTgAL8lHxiF99JSb/QaQrtITzyA7Sfddu9/O2tGMXOjn05RqjRRIkF8HzENjKve7AVhfYafaJOG8uhrgcUUdTWyZpQmr0EuzjqxEBTjw3QsLvGtkqZK2J7e1aPsXpZM6rlUVC8UcO73kUyDlrOKYLcy2bJu1/Q/l2sw3RN/3p38zxtHvpio6+0HPccNqUvvKE9wyutHmZsibIHvVniwMH3tsObc5Jzka7ijoFLUTYdvothZ3hUmtdKkAE3Ha7JqNPbSXfacb6EcrzND7zQuT3UOOK6wNUdCvqqs/+Il+peKSvi7yoc9ILoq+7d/wlz//5dBWD+rvpW9GcT8k+Nyn8CDABPkLPNK32kEwAAAABJRU5ErkJggg==) no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: -0.15rem;"></b>
+							</span></li>
+						</ul>
+					</div>
+					
+					<button class="bind_btn" type="button" onclick="window.location.href='bindlicenceplate.html'">添加车牌</button>
+    			 </li>
+			</ul>
+		</div>
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+    				<a href="" class="list_a">
+    					<div class="listUp">
+    						<div class="areaTime" style="font-weight: bold;">绑定须知：</div>
+							<div class="areaTime">1.一个手机号只能绑定3张车牌号</div>
+							<div class="areaTime">2.绑定车牌号后可领取并使用优惠券</div>
+							<div class="areaTime">3.解绑车牌号需180天后才可以重新绑定</div>
+						</div>
+    				</a>
+    				
+    			 </li>
+			</ul>
+		</div>
+		<div class="bottomTips">懂生活 选麦德龙</div>
+		<ul class="footerul">
+			<li class="list">
+				<a href="index1.html" class="list_a">
+					<div class="footimg">
+						<img src="images/park.png">
+					</div>
+					<h3>我要缴费</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="bindlicenceplate.html" class="list_a">
+					<div class="footimg">
+						<img src="images/car.png" />
+					</div>
+					<h3>车牌管理</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="makeList.html" class="list_a">
+					<div class="footimg">
+						<img src="images/record.png" />
+					</div>
+					<h3>缴费记录</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="javascript:customer()" class="list_a">
+					<div class="footimg">
+						<img src="images/customer.png" />
+					</div>
+					<h3>账户设置</h3>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="dialogContent hide" id="openDialog">
+		<div class="dialog">
+			<h2>账户信息:  136****2130</h2>
+			<div class="dialogBox">
+				<div class="dialogBoxChild">
+					<button class="cancelBtn" type="button" onclick="window.location.href='login.html'">注 销</button>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<div class="areaTitle">
+						<div class="areaTitleLeft">客服电话：</div>
+						<div class="areaTitleRight">400 XXX XXXX</div>
+					</div>	
+				</li>
+				<li>
+					<div class="areaTitle">
+						<div class="areaTitleLeft">服务时间：</div>
+						<div class="areaTitleRight">09:00 - 18:00</div>
+					</div>	
+				</li>
+			</ul>
+			<img onclick="cancels(this)" src="images/close.png" style="position: absolute;width: 25px;top: 10px;right: 10px;" />
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js" ></script>
+	<script type="text/javascript" src="js/keybord.js"></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script>
+		
+	</script>
+</body>
+</html>

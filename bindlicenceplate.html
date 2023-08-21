@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>麦德龙停车中台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="images/list.png">
+	<link rel="icon" type="image/jpg" href="images/list.png">
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+					<div class="title_top">
+						<span>我绑定的车牌号：</span>
+					</div>
+    				<a class="list_a">
+    					<div class="bindCar">
+    						<div class="bindCarbtned"><s>沪A12345</s></div>
+    					</div>
+    					<div class="listRight">
+    						<div class="bindCar">
+	    						<div class="unbindCarbtn" onclick="give()"><s>解 绑</s></div>
+	    					</div>
+    					</div>
+    				</a>
+    			 </li>
+			</ul>
+		</div>
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+    				<a class="list_a">
+    					<div class="bindCar">
+    						<h3>#2 解冻时间：2022-08-06</h3>
+    					</div>
+    					<div class="listRight">
+    						<div class="bindCar">
+	    						<div class="disCarbtn"><s>冻结中</s></div>
+	    					</div>
+    					</div>
+    				</a>
+    			 </li>
+			</ul>
+		</div>
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+    				<a class="list_a">
+    					<div class="bindCar">
+    						<div class="bindCarbtn" onclick="window.location.href='bindcarplate.html'"><b>+</b> <s>请绑定车牌</s></div>
+    					</div>
+    				</a>
+    			 </li>
+			</ul>
+		</div>
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+    				<a href="" class="list_a">
+    					<div class="listUp">
+    						<div class="areaTime" style="font-weight: bold;">绑定须知：</div>
+							<div class="areaTime">1.一个手机号只能绑定3张车牌号</div>
+							<div class="areaTime">2.绑定车牌号后可领取并使用优惠券</div>
+							<div class="areaTime">3.解绑车牌号需180天后才可以重新绑定</div>
+						</div>
+    				</a>
+    				
+    			 </li>
+			</ul>
+		</div>
+		
+		<div class="bottomTips">懂生活 选麦德龙</div>
+		<ul class="footerul">
+			<li class="list">
+				<a href="index1.html" class="list_a">
+					<div class="footimg">
+						<img src="images/park.png">
+					</div>
+					<h3>我要缴费</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="bindlicenceplate.html" class="list_a">
+					<div class="footimg">
+						<img src="images/car.png" />
+					</div>
+					<h3>车牌管理</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="makeList.html" class="list_a">
+					<div class="footimg">
+						<img src="images/record.png" />
+					</div>
+					<h3>缴费记录</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="javascript:customer()" class="list_a">
+					<div class="footimg">
+						<img src="images/customer.png" />
+					</div>
+					<h3>退出登录</h3>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="dialogContent hide" id="success">
+		<div class="dialog">
+			<h2>您确认解绑车牌吗？</h2>
+			<ul>
+				<li>
+					<div class="areaTitle">
+						提示：解绑后需要冻结180天才可以重新绑定车牌。
+					</div>	
+				</li>
+			</ul>
+			<div class="dialogBox">
+				<div class="dialogBoxChild">
+					<button class="cancelBtn" type="button" onclick="cancelClick()">关 闭</button>
+				</div>
+				<div class="dialogBoxChild">
+					<button type="button" onclick="sureClick()">确 认</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dialogContent hide" id="openDialog">
+		<div class="dialog">
+			<h2>账户信息:  136****2130</h2>
+			<div class="dialogBox">
+				<div class="dialogBoxChild">
+					<button class="cancelBtn" type="button" onclick="window.location.href='login.html'">注 销</button>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<div class="areaTitle">
+						<div class="areaTitleLeft">客服电话：</div>
+						<div class="areaTitleRight">400 XXX XXXX</div>
+					</div>	
+				</li>
+				<li>
+					<div class="areaTitle">
+						<div class="areaTitleLeft">服务时间：</div>
+						<div class="areaTitleRight">09:00 - 18:00</div>
+					</div>	
+				</li>
+			</ul>
+			<img onclick="cancels(this)" src="images/close.png" style="position: absolute;width: 25px;top: 10px;right: 10px;" />
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script>
+		function give(){
+			$('#success').removeClass('hide');
+		}
+		function cancelClick(){
+			$('#success').addClass('hide');
+		}
+		function sureClick(){
+			cancelClick()
+		}
+		
+	</script>
+</body>
+</html>

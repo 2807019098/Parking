@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>麦德龙停车中台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="images/list.png">
+	<link rel="icon" type="image/jpg" href="images/list.png">
+	<link rel="stylesheet" href="css/base.css" />
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container disclaimerMain">
+		<div class="disclaimerPolicy">
+			<section>
+				<h2>捷安泊H5缴费页面</h2>
+				<div class="carbtn" onclick="addcar()"><b>+</b> <s>添加车牌号</s></div>
+			</section>
+		</div>
+	</div>
+	<div class="dialogContent dialoglayer hide">
+		<div class="dialogInfo">
+			<h2>车牌号码</h2>
+			<div class="car_input">
+				<ul class="clearfix ul_input">
+					<li class="input_pro"><span></span></li>
+					<li class="input_pp input_zim"><span></span></li>
+					<li class="input_pp"><span></span></li>
+					<li class="input_pp"><span></span></li>
+					<li class="input_pp"><span></span></li>
+					<li class="input_pp"><span></span></li>
+					<li class="input_pp"><span></span></li>
+					<li class="input_pp"><span>新能源</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/layer_mobile/layer.js" ></script>
+	<script type="text/javascript" src="js/keybord.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script>
+		function addcar(){
+			$(".dialogContent").removeClass('hide');
+		}
+	</script>
+</body>
+</html>

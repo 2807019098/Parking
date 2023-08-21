@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>麦德龙停车中台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="images/list.png">
+	<link rel="icon" type="image/jpg" href="images/list.png">
+	<link rel="stylesheet" href="css/base.css" />
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container loginBox">
+		<div class="headImg">
+			<img src="images/Logo.png" />
+		</div>
+		<div class="shoplist loginBox">
+			<ul class="loginBox">
+				<li class="list loginBox">
+					<form class="form" autocomplete="off" name="form" action="" method="get">
+						<ol>
+							<li class="formli">
+								<div class="formlist">
+									<input type="number" placeholder="请填写麦德龙会员手机号" value="" id="phone" />
+								</div>
+							</li>
+							<li class="formli">
+								<div class="formlist">
+									<input type="number" placeholder="请输入短信验证码" value="" id="sms" />
+									<input type="button" value="获取短信验证码" id="SendCode" onclick="checkSms()" />
+								</div>
+							</li>
+							<li class="formli">
+								<div class="formlist">
+									<button class="formli_btn" type="button" onclick="submitData()">会员登录领券</button>
+								</div>
+							</li>
+							<li class="formli">
+								<div class="formlist">
+									<button class="formli_btns" type="button" onclick="submitData()">非会员登录领券</button>
+								</div>
+							</li>
+							<li class="formli">
+								<div class="formlist">
+									<div class="formlistcheck">
+										<label for="checkbox">
+											<input type="checkbox" value="" name="check" id="checkbox" />
+										</label>
+										<p>
+											<label for="checkbox">我已阅读并同意</label>
+											<a class="check_a" onclick="toKnow()">《儿童乐园使用须知》</a>
+											<a class="check_a" onclick="toDisclaimer()">《麦德龙儿童个人信息保护规则及监护人须知》</a>
+											<a class="check_a" onclick="toPrivacyPolicy()">《麦德龙个人信息保护规则及隐私政策》</a>
+										</p>
+									</div>
+								</div>
+							</li>
+						</ol>
+					</form>
+    			</li>
+			</ul>
+		</div>
+		<div class="bottomTips" id="bottomx">懂生活 选麦德龙</div>
+	</div>
+	<div class="noteBody" id="noteBody">
+		<h2 class="noteHead">
+			<div class="closeNote" onclick="closeNote()">关闭</div>
+		</h2>
+		<div class="nodeContent" id="nodeContent"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script>
+		
+		function submitData(){
+			var phone = $("#phone").val();
+			var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(16[6]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[8-9]{1}))+\d{8})$/;
+			var sms = $("#sms").val();
+			var check = $("input[name='check']:checked").val();
+			
+			if (phone == ""){
+				Elastic("ElasticClass","请输入手机号码",1500);
+				form.phone.focus();
+			} else if (!phonereg.test(phone)){
+				Elastic("ElasticClass","请输入正确的手机号码",1500);
+				form.phone.focus();
+			} else if (sms == ""){
+				Elastic("ElasticClass","请输入短信验证码",1500);
+				form.sms.focus();
+			} else if (check != 0){
+				Elastic("ElasticClass","请勾选免责申明和麦德龙隐私政策",1500);
+			} else {
+				window.location.href='index1.html'
+			}
+		}
+		
+		function checkSms(){
+			var phone = $("#phone").val();
+			var phonereg = /^(((13[0-9]{1})|(15[0-9]{1})|(16[6]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[8-9]{1}))+\d{8})$/;
+			
+			if (phone == ""){
+				Elastic("ElasticClass","请填写预约人手机号码",1500);
+				form.phone.focus();
+			} else if (!phonereg.test(phone)){
+				Elastic("ElasticClass","请填写正确的手机号码",1500);
+				form.phone.focus();
+			} else {
+				SendInfo()
+			}
+		}
+		
+		
+		//短信验证码
+
+		var $InterValObj; //timer变量，控制时间
+		var $count = 60; //间隔函数，1秒执行
+		var $curCount;//当前剩余秒数
+		var $code = ""; //验证码
+		var $codeLength = 6;//验证码长度
+		function SendInfo() {
+			$curCount = $count;
+			//产生验证码
+			for (var i = 0; i < $codeLength; i++) {
+				$code += parseInt(Math.random() * 9).toString();
+			}
+			//设置button效果，开始计时
+			$("#SendCode").attr("disabled",true);
+			$("#SendCode").val( + $curCount + "秒后再获取");
+			$InterValObj = window.setInterval(SetResetTime, 1000); //启动计时器，1秒执行一次
+		}
+		
+		//timer处理函数
+		function SetResetTime() {
+			if ($curCount == 0) {                
+				window.clearInterval($InterValObj);//停止计时器
+				$("#SendCode").removeAttr("disabled");//启用按钮
+				$("#SendCode").val("获取验证码");
+				$code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效    
+			}else {
+				$curCount--;
+				$("#SendCode").val( + $curCount + "秒后再获取");
+			}
+		}
+		
+		function toDisclaimer(){
+			var url = 'disclaimer.html .container';
+			noteBody();
+			$("#nodeContent").load(url,"",function(){
+				
+			})
+		}
+		
+		function toPrivacyPolicy(){
+			var url = 'privacyPolicy.html .container';
+			noteBody();
+			$("#nodeContent").load(url,"",function(){
+				
+			})
+		}
+		
+		function toKnow(){
+			var url = 'know.html .container';
+			noteBody();
+			$("#nodeContent").load(url,"",function(){
+				
+			})
+		}
+		
+		function noteBody(){
+			$("#noteBody").animate({
+				top:'0'
+			},300)
+		}
+		
+		function closeNote(){
+			$("#noteBody").animate({
+				top:'100%'
+			},300)
+		}
+		
+		$("input[type='number']").each(function(){
+			$(this).focus(function(){
+				$('#bottomx').hide()
+			})
+			$(this).blur(function(){
+				$('#bottomx').show()
+			})
+		})
+		var windheight =window.innerHeight;         
+	 	var bottomx = document.getElementById('bottomx'); //底部导航
+		window.onresize = function () {
+			var docheight = window.innerHeight;         
+		    if(docheight < windheight){            
+		        bottomx.style.position = 'static';
+		    }else{
+		        bottomx.style.position = 'fixed';
+		    }     
+		}
+	</script>
+</body>
+</html>

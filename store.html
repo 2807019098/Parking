@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>麦德龙停车中台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="images/list.png">
+	<link rel="icon" type="image/jpg" href="images/list.png">
+	<link rel="stylesheet" href="css/base.css" />
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="illustrate_search_select">
+			<div class="illustrate_title">
+				<div class="illustrate_title_left">
+					请选择车辆进场商场：
+				</div>
+			</div>
+			<div class="search" onclick="openGps()">
+				<input type="text" id="city" placeholder="请输入/选择城市" value="" readonly="" />
+				<div class="tri_icon">▼</div>
+			</div>
+			
+		</div>
+		<div class="shoplist">
+			<ul id="ullist"></ul>
+		</div>
+	</div>
+	<div class="GpsList">
+		<div class="header">
+			<div class="closeGps" onclick="closeGps()">取消</div>
+			<input id="citySearch" class="search_input" type="text" placeholder="请输入/选择城市" value="" />
+			<div class="search_btn" onclick="citySearch(this)">确定</div>
+		</div>
+		<div class="cityList">
+			<ul>
+				<li onclick="getCity(this)">青岛</li>
+				<li onclick="getCity(this)">大连</li>
+				<li onclick="getCity(this)">无锡</li>
+				<li onclick="getCity(this)">常州</li>
+				<li onclick="getCity(this)">南京</li>
+				<li onclick="getCity(this)">北京</li>
+				<li onclick="getCity(this)">廊坊</li>
+				<li onclick="getCity(this)">长春</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<script>
+		
+	</script>
+</body>
+</html>

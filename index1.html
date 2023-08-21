@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,viewport-fit=cover, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+	<meta name="applicable-device" content="pc,mobile"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="X-UA-Compatible" content="edge">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta name="wap-font-scale" content="no">
+	<script src="js/flexible.js"></script>
+	<title>麦德龙停车中台</title>
+	<link rel="apple-touch-icon" type="image/jpg" href="images/list.png">
+	<link rel="icon" type="image/jpg" href="images/list.png">
+	<link rel="stylesheet" href="css/base.css" />
+	<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+					<div class="title_top">
+						<span>您当前所在门店</span>
+						<a href="store.html" class="chooseBtn">切换门店</a>
+					</div>
+    				<a href="" class="list_a">
+    					<div class="listimg">
+    						<img src="images/list.png" />
+    					</div>
+    					<div class="listRight">
+    						<div class="listUp">
+        						<div class="areaName">上海浦东商场</div>
+        						<div class="areaTime">营业时间：06:00 - 22:00</div>
+        						<div class="address">按停车场公示的收费标准执行</div>
+    						</div>
+    					</div>
+    				</a>
+    			 </li>
+			</ul>
+		</div>
+		<div class="shoplist chooseDateSession">
+			<div class="shoptitle">
+				<h3 onclick="shoptitle(this, 0)" class="active"><span>个人卡领券</span></h3>
+				<h3 onclick="shoptitle(this, 1)"><span>企业卡领券</span></h3>
+				<a href="payment.html">直接缴费</a>
+			</div>
+			<div class="shopItem">
+				<section>
+					<ul>
+						<li class="list">
+							<div class="title_top">
+								<span>请选择车牌号：</span>
+							</div>
+							<a class="list_a">
+								<div class="bindCar">
+									<div class="bindCarbtned"><s>沪A12345</s></div>
+								</div>
+								<div class="listRight">
+									<div class="bindCar">
+										<button type="button" onclick="getcoupon(this)" class="unbindCarbtn">领券缴费</button>
+									</div>
+								</div>
+							</a>
+							<span class="tips">请检查录入车牌或联系门店店员处理</span>
+						</li>
+						<li class="list">
+							<div class="title_top">
+								<span>请选择车牌号：</span>
+							</div>
+							<a class="list_a">
+								<div class="bindCar">
+									<div class="bindCarbtned"><s>沪A12345</s></div>
+								</div>
+								<div class="listRight">
+									<div class="bindCar">
+										<button type="button" onclick="checkSms(this)" id="SendCode"
+											class="unbindCarbtn">查询超时，请重试</button>
+									</div>
+								</div>
+							</a>
+							<span class="tips">请检查录入车牌或联系门店店员处理</span>
+						</li>
+						<li class="list">
+							<div class="title_top">
+								<span>请选择车牌号：</span>
+							</div>
+							<a class="list_a">
+								<div class="bindCar">
+									<div class="bindCarbtned"><s>沪A12345</s></div>
+								</div>
+								<div class="listRight">
+									<div class="bindCar">
+										<button type="button" class="unbindCarbtn" onclick="getcoupon(this)">重试中</button>
+									</div>
+								</div>
+							</a>
+							<span class="tips">请检查录入车牌或联系门店店员处理</span>
+						</li>
+						<li class="list">
+							<div class="title_top">
+								<span>请选择车牌号：</span>
+							</div>
+							<a class="list_a">
+								<div class="bindCar">
+									<div class="bindCarbtned"><s>沪A12345</s></div>
+								</div>
+								<div class="listRight">
+									<div class="bindCar">
+										<button type="button" class="unbindCarbtn" onclick="getcoupon(this)">请稍后重试</button>
+									</div>
+								</div>
+							</a>
+							<span class="tips">请检查录入车牌或联系门店店员处理</span>
+						</li>
+						<li class="list">
+							<a class="list_a">
+								<div class="bindCar">
+									<div class="bindCarbtned"><s>沪A12345</s></div>
+								</div>
+								<div class="listRight">
+									<div class="bindCar">
+										<button type="button" class="disCarbtn">不在场</button>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="list">
+		    				<a class="list_a">
+		    					<div class="bindCar">
+		    						<div class="bindCarbtn" onclick="window.location.href='bindcarplate.html'"><b>+</b> <s>请绑定车牌</s></div>
+		    					</div>
+		    				</a>
+		    			 </li>
+					</ul>
+					<ul>
+						<li class="list">
+							<div class="title_top">
+								<span>您当前选择的车牌号：</span>
+								<a href="index1.html">切换车牌</a>
+							</div>
+							<a class="list_a">
+								<div class="bindCar bindCarcoupon">
+									<div class="bindCarindexbtned"><s>沪A12345</s></div>
+									<div class="bindCarindexbtned tips"><span>进场时间：2022-02-14 10:22:33</span></div>
+								</div>
+							</a>
+						 </li>
+					</ul>
+					<ul>
+						<li class="list">
+							<div class="shoplist chooseDateSession">
+								<ul style="margin: 0;padding: 0;">
+									<li class="list" style="padding: 0;border-radius: 0;box-shadow: none;">
+										<a href="" class="list_a">
+											<div class="listUp">
+												<div class="areaTime">
+													<span style="font-weight: bold;">2023 0620 11:19:30</span>
+												</div>
+												<div class="areaTime">
+													<span class="tips" style="margin-top: 0;">您消费未满足领券门槛。</span>
+												</div>
+												<div class="areaTime">您的身份：普通会员</div>
+												<div class="areaTime">消费金额：10元</div>
+												<div class="areaTime">需要满足单笔金额88，可以获取2小时停车抵扣券。</div>
+											</div>
+										</a>
+										
+									 </li>
+								</ul>
+							</div>
+							<a class="list_b">
+								<div class="bindCar_btn">
+									<button class="form_btn_b" type="button" onclick="window.location.href='payment.html'">直接缴费</button>
+								</div>
+							</a>
+						 </li>
+					</ul>
+				</section>
+				<article style="display: none;">
+					<ul>
+						<li class="list">
+							<div class="title_top">
+								<span>您当前选择的车牌号：</span>
+								<a onclick="changeCar(this)" class="chooseBtn">切换车牌</a>
+							</div>
+		    				<a class="list_a">
+		    					<div class="listRight">
+		    						<div class="listUp">
+		        						<div class="areaName">鲁L77D28</div>
+		        						<div class="areaTime">进场时间：2/23/2022 12:30:39 PM</div>
+		    						</div>
+		    					</div>
+		    				</a>
+		    			 </li>
+					</ul>
+				</article>
+			</div>
+			<div class="shopItem hide">
+				<section>
+					<ul>
+						<li class="list">
+							<div class="title_top">
+								<span>请选择车牌号：</span>
+							</div>
+		    				<a class="list_a">
+		    					<div class="bindCar">
+		    						<div class="bindCarbtned"><s>鲁L77D28</s></div>
+		    					</div>
+		    					<div class="listRight">
+		    						<div class="bindCar">
+			    						<div class="unbindCarbtn"><s onclick="getcoupon(this)">领券缴费</s></div>
+			    					</div>
+		    					</div>
+		    				</a>
+		    			 </li>
+					</ul>
+					<ul>
+						<li class="list">
+		    				<a class="list_a">
+		    					<div class="bindCar">
+		    						<div class="bindCarbtned"><s>鄂A12345</s></div>
+		    					</div>
+		    					<div class="listRight">
+		    						<div class="bindCar">
+			    						<div class="disCarbtn"><s>不在场</s></div>
+			    					</div>
+		    					</div>
+		    				</a>
+		    			 </li>
+					</ul>
+					<ul>
+						<li class="list">
+		    				<a class="list_a">
+		    					<div class="bindCar">
+		    						<div class="bindCarbtn" onclick="window.location.href='bindcarplate.html'"><b>+</b> <s>请绑定车牌</s></div>
+		    					</div>
+		    				</a>
+		    			 </li>
+					</ul>
+				</section>
+				<article style="display: none;">
+					<ul>
+						<li class="list">
+							<div class="title_top">
+								<span>您当前选择的车牌号：</span>
+								<a onclick="changeCar(this)" class="chooseBtn">切换车牌</a>
+							</div>
+		    				<a class="list_a">
+		    					<div class="listRight">
+		    						<div class="listUp">
+		        						<div class="areaName">鲁L77D28</div>
+		        						<div class="areaTime">进场时间：2/23/2022 12:30:39 PM</div>
+		    						</div>
+		    					</div>
+		    				</a>
+		    			 </li>
+					</ul>
+					<ul>
+						<li class="list">
+							<div class="title_top">
+								<input style="padding: 10px 0;text-align: center;width: 80%;margin: 0 auto;border-bottom: 1px solid #F2F2F2;box-sizing: border-box;" type="text" placeholder="请输入当前门店当日订单号" />
+							</div>
+		    				<a class="list_a" style="padding: 20px 0 10px 0;">
+		    					<button type="button" class="form_btn_" type="button" style="margin: 0;" onclick="getTicket()">领券</button>
+		    				</a>
+		    				<span onclick="openTips()" style="display: block;color: #ffffff;position: absolute;top: 20px;right: 10px;z-index: 2;font-size: 12px;width: 20px;height: 20px;border-radius: 50%;background-color: #cccccc;text-align: center;line-height: 20px;">
+			    				?
+			    			</span>
+		    			</li>
+					</ul>
+				</article>
+			</div>
+		</div>
+		<div class="shoplist chooseDateSession">
+			<ul>
+				<li class="list">
+    				<a href="" class="list_a">
+    					<div class="listimg">
+    						<img src="images/illustrate.png" />
+    					</div>
+    					<div class="listRight">
+    						<div class="listUp">
+        						<div class="areaTime">麦德龙会员当日消费可享受停车减免时长，如有消费则可以先绑定车牌，再获取免费时长，如无消费，则可以选择直接缴费。</div>
+    						</div>
+    					</div>
+    				</a>
+    			 </li>
+			</ul>
+		</div>
+		<ul class="footerul">
+			<li class="list">
+				<a href="index1.html" class="list_a">
+					<div class="footimg">
+						<img src="images/park.png">
+					</div>
+					<h3>我要缴费</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="bindlicenceplate.html" class="list_a">
+					<div class="footimg">
+						<img src="images/car.png" />
+					</div>
+					<h3>车牌管理</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="makeList.html" class="list_a">
+					<div class="footimg">
+						<img src="images/record.png" />
+					</div>
+					<h3>缴费记录</h3>
+				</a>
+			</li>
+			<li class="list">
+				<a href="javascript:customer()" class="list_a">
+					<div class="footimg">
+						<img src="images/customer.png" />
+					</div>
+					<h3>退出登录</h3>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="dialogContent hide" id="openDialog">
+		<div class="dialog">
+			<h2>领取成功/失败弹层</h2>
+			<div class="dialogBox">
+				<div class="dialogBoxChild">
+					<button class="cancelBtn" type="button" onclick="cancels(this)">关 闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="dialogContent hide" id="openTips">
+		<div class="dialog">
+			<h2>单号查看/单号查看/单号查看/单号查看</h2>
+			<div class="dialogBox">
+				<div class="dialogBoxChild">
+					<button class="cancelBtn" type="button" onclick="cancelTips(this)">关 闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script>
+		$(function(){
+		
+		})
+		
+		function shoptitle(obj, index){
+			$(obj).addClass('active').siblings().removeClass('active');
+			$(".shopItem").eq(index).removeClass('hide').siblings().addClass('hide');
+		}
+		
+		function getcoupon(obj) {
+			$(obj).parents('section').hide();
+			$(obj).parents('section').next().show();
+		}
+		
+		function changeCar(obj) {
+			$(obj).parents('article').hide();
+			$(obj).parents('article').prev().show();
+		}
+		
+		function getTicket(){
+			$("#openDialog").removeClass('hide');
+		}
+		
+		function openTips() {
+			$("#openTips").removeClass('hide');
+		}
+		
+		function cancelTips() {
+			$("#openTips").addClass('hide');
+		}
+
+		/**
+		 *验证码
+		 *
+		 */
+		 let InterValObj; //定时器变量，控制时间
+		const count = 60; //间隔函数，1秒执行
+		let curCount;//当前剩余秒数
+		let code = ""; //验证码
+		const codeLength = 6;//验证码长度
+
+		const checkSms = () => {
+			sendInfo();
+		};
+
+		const sendInfo = () => {
+			curCount = count;
+			generateCode();
+			disableSendButton();
+			InterValObj = window.setInterval(setResetTime, 1000);
+		};
+
+		const generateCode = () => {
+			code = "";
+			for (let i = 0; i < codeLength; i++) {
+				code += parseInt(Math.random() * 9).toString();
+			}
+		};
+
+		const disableSendButton = () => {
+			const sendCodeButton = document.querySelector("#SendCode");
+			sendCodeButton.setAttribute("disabled", true);
+			sendCodeButton.textContent = `重试中${curCount}`;
+			sendCodeButton.style.backgroundColor = 'rgb(0 91 172 / 20%)';
+		};
+
+		const enableSendButton = () => {
+			const sendCodeButton = document.querySelector("#SendCode");
+			sendCodeButton.removeAttribute("disabled");
+			sendCodeButton.textContent = '获取验证码';
+		};
+
+		const setResetTime = () => {
+			if (curCount === 0) {
+				clearInterval(InterValObj);
+				enableSendButton();
+				code = "";
+			} else {
+				curCount--;
+				updateSendButtonText();
+			}
+		}
+
+		const updateSendButtonText = () => {
+			const sendCodeButton = document.querySelector("#SendCode");
+			sendCodeButton.textContent = `请稍后重试${curCount}`;
+			sendCodeButton.style.backgroundColor = 'rgb(0 91 172 / 20%)';
+		};
+	</script>
+</body>
+</html>

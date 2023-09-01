@@ -325,6 +325,18 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset !importan
 }
 .list .list_a{
 	display: flex;
+	padding: 10px 0;
+	border-bottom: 1px solid #F2F2F2;
+	box-sizing: border-box;
+}
+.list .list_a:last-child{
+	border-bottom: 0;
+	padding-bottom: 0;
+	color: #005BAC;
+	font-size: 15px;
+}
+.list .list_a:last-child span {
+	font-weight: bold;
 }
 .listimg{
 	width: .7rem;
@@ -387,6 +399,14 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset !importan
 	display: flex;
 	flex: 1;
 	align-items: flex-end;
+}
+.plist{
+	background: #005BAC;
+	border-radius: 0.3rem;
+	overflow: hidden;
+    padding: 0.2rem;
+	color: #FFFFFF;
+	font-size: 12px;
 }
 .GpsList{
 	display: none;
@@ -784,7 +804,7 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset !importan
 	margin: 0 auto;
     background-color: #FFFFFF;
     border: 1px solid #850d56;
-    color: #850d56;
+    color: #222222;
     border-radius: 0.5rem;
     padding: 0.1rem 0.2rem;
 }
@@ -1413,27 +1433,46 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset !importan
     align-items: center;
     font-size: .36rem;
 }
-.unbindCarbtn{
-	min-width: 2rem;
+.bindCarbtn{
+	width: 2.1rem;
     color: #005BAC;
-    border-radius: 0.2rem;
-    padding: 0.2rem 0.2rem;
+    border-radius: 0.4rem;
+    padding: 0.15rem 0.2rem;
     border: 1px solid #005BAC;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+	font-size: 12px;
+	line-height: 1;
 }
-.disCarbtn{
-	min-width: 2rem;
-    color: #CCCCCC;
-    border-radius: 0.2rem;
-    padding: 0.2rem 0.2rem;
-    border: 1px solid #CCCCCC;
+.unbindCarbtn{
+	width: 2.1rem;
+    color: #ffffff;
+    border-radius: 0.4rem;
+    padding: 0.15rem 0.2rem;
+    border: 1px solid #cccccc;
+	background-color: #cccccc;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+	font-size: 12px;
+	line-height: 1;
+}
+.disCarbtn{
+	width: 2.1rem;
+    color: #FFFFFF;
+    border-radius: 0.4rem;
+    padding: 0.15rem 0.2rem;
+    border: 1px solid rgba(0, 92, 172, 0.4);
+	background-color: rgba(0, 92, 172, 1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	font-size: 12px;
+	line-height: 1;
 }
 .footerul{
 	display: flex;
@@ -1455,13 +1494,13 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset !importan
     background: #FFFFFF;
     box-shadow: 0 0 1px 0 rgb(197 197 197 / 60%);
     overflow: hidden;
-    padding: 0.2rem;
 }
 .footerul li.list .list_a{
 	flex-direction: column;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: #888888;
 }
 .shoplist ul.footerul li.list{
 	margin-bottom: 0;

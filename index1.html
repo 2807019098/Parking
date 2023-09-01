@@ -65,74 +65,62 @@
 								</div>
 								<div class="listRight">
 									<div class="bindCar">
-										<button type="button" onclick="getcoupon(this)" class="unbindCarbtn">领券缴费</button>
+										<button type="button" onclick="getcoupon(this)" class="bindCarbtn">领券缴费</button>
 									</div>
 								</div>
 							</a>
-							<span class="tips">请检查录入车牌或联系门店店员处理</span>
-						</li>
-						<li class="list">
-							<div class="title_top">
-								<span>请选择车牌号：</span>
-							</div>
 							<a class="list_a">
 								<div class="bindCar">
 									<div class="bindCarbtned"><s>沪A12345</s></div>
 								</div>
 								<div class="listRight">
 									<div class="bindCar">
-										<button type="button" onclick="checkSms(this)" id="SendCode"
-											class="unbindCarbtn">查询超时，请重试</button>
+										<button type="button" onclick="startCountdown(this, 5, '请稍后重试')" id="SendCode"
+											class="disCarbtn">超时,请重试</button>
 									</div>
 								</div>
 							</a>
-							<span class="tips">请检查录入车牌或联系门店店员处理</span>
-						</li>
-						<li class="list">
-							<div class="title_top">
-								<span>请选择车牌号：</span>
-							</div>
+							<!-- <a class="list_a">
+								<div class="bindCar">
+									<div class="bindCarbtned"><s>沪A12345</s></div>
+								</div>
+								<div class="listRight">
+									<div class="bindCar">
+										<button type="button" class="disCarbtn" onclick="getcoupon(this)">重试中</button>
+									</div>
+								</div>
+							</a> -->
 							<a class="list_a">
 								<div class="bindCar">
 									<div class="bindCarbtned"><s>沪A12345</s></div>
 								</div>
 								<div class="listRight">
 									<div class="bindCar">
-										<button type="button" class="unbindCarbtn" onclick="getcoupon(this)">重试中</button>
+										<button type="button" class="disCarbtn" onclick="startCountdown(this, 60, '多次失败,请重试')">多次失败,请重试</button>
 									</div>
 								</div>
 							</a>
-							<span class="tips">请检查录入车牌或联系门店店员处理</span>
-						</li>
-						<li class="list">
-							<div class="title_top">
-								<span>请选择车牌号：</span>
-							</div>
+							
 							<a class="list_a">
 								<div class="bindCar">
 									<div class="bindCarbtned"><s>沪A12345</s></div>
 								</div>
 								<div class="listRight">
 									<div class="bindCar">
-										<button type="button" class="unbindCarbtn" onclick="getcoupon(this)">请稍后重试</button>
+										<button type="button" class="unbindCarbtn">不在场</button>
 									</div>
 								</div>
 							</a>
-							<span class="tips">请检查录入车牌或联系门店店员处理</span>
-						</li>
-						<li class="list">
 							<a class="list_a">
-								<div class="bindCar">
-									<div class="bindCarbtned"><s>沪A12345</s></div>
-								</div>
-								<div class="listRight">
-									<div class="bindCar">
-										<button type="button" class="disCarbtn">不在场</button>
-									</div>
-								</div>
+								<span>温馨提示：</span>请检查录入车牌或联系门店店员处理
 							</a>
 						</li>
 					</ul>
+					<!-- <ul>
+						<li class="plist">
+		    				请检查录入车牌或联系门店店员处理
+		    			 </li>
+					</ul> -->
 					<ul>
 						<li class="list">
 		    				<a class="list_a">
@@ -161,17 +149,55 @@
 							<div class="shoplist chooseDateSession">
 								<ul style="margin: 0;padding: 0;">
 									<li class="list" style="padding: 0;border-radius: 0;box-shadow: none;">
-										<a href="" class="list_a">
+										<a class="list_a">
 											<div class="listUp">
 												<div class="areaTime">
 													<span style="font-weight: bold;">2023 0620 11:19:30</span>
 												</div>
 												<div class="areaTime">
-													<span class="tips" style="margin-top: 0;">您消费未满足领券门槛。</span>
+													<span style="margin-top: 0;font-size: 0.36rem;filter: drop-shadow(2px 2px 2px rgb(0 91 172 / 30%));">未查询可以领取优惠券</span>
+												</div>
+												<div class="areaTime">1.您当前登录手机号为<span style="font-weight: bold;">136****2130</span><span style="font-weight: bold;">（取用户当前登录手机号，中间四位*号展示）</span>，是否和麦德龙会员卡绑定手机号一致，如不一致请注销后切换手机号。</div>
+												<div class="areaTime">2.手机号一致，暂未查到订单信息，请稍后重试。<span style="--deg: 135deg;
+													color: #fff;
+													padding: 3px 10px;
+													border-radius: 25px;
+													font-size: 11px;
+													filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.75));
+													background: linear-gradient(var(--deg), rgb(0 91 172 / 100%), rgb(0 91 172 / 75%));
+													display: inline-flex;
+													line-height: 1.2;
+													align-items: center;
+													justify-content: center;">重 试</span></div>
+											</div>
+										</a>
+										
+									 </li>
+								</ul>
+							</div>
+							<a class="list_b">
+								<div class="bindCar_btn">
+									<button class="form_btn_b" type="button" onclick="window.location.href='payment.html'">直接缴费</button>
+								</div>
+							</a>
+						 </li>
+					</ul>
+					<ul>
+						<li class="list">
+							<div class="shoplist chooseDateSession">
+								<ul style="margin: 0;padding: 0;">
+									<li class="list" style="padding: 0;border-radius: 0;box-shadow: none;">
+										<a class="list_a">
+											<div class="listUp">
+												<div class="areaTime">
+													<span style="font-weight: bold;">2023 0620 11:19:30</span>
+												</div>
+												<div class="areaTime">
+													<span style="margin-top: 0;font-size: 0.36rem;filter: drop-shadow(2px 2px 2px rgb(0 91 172 / 30%));">您消费未满足领券门槛。</span>
 												</div>
 												<div class="areaTime">您的身份：普通会员</div>
-												<div class="areaTime">消费金额：10元</div>
-												<div class="areaTime">需要满足单笔金额88，可以获取2小时停车抵扣券。</div>
+												<div class="areaTime">消费金额：<span style="font-weight: bold;">10</span>元</div>
+												<div class="areaTime">需要满足单笔金额<span style="font-weight: bold;">88</span>，可以获取<span style="font-weight: bold;">2</span>小时停车抵扣券。</div>
 											</div>
 										</a>
 										
@@ -222,10 +248,6 @@
 			    					</div>
 		    					</div>
 		    				</a>
-		    			 </li>
-					</ul>
-					<ul>
-						<li class="list">
 		    				<a class="list_a">
 		    					<div class="bindCar">
 		    						<div class="bindCarbtned"><s>鄂A12345</s></div>
@@ -390,59 +412,41 @@
 		 *验证码
 		 *
 		 */
-		 let InterValObj; //定时器变量，控制时间
-		const count = 60; //间隔函数，1秒执行
-		let curCount;//当前剩余秒数
-		let code = ""; //验证码
-		const codeLength = 6;//验证码长度
+		
+		const startCountdown = (obj, duration, text) => {
 
-		const checkSms = () => {
-			sendInfo();
+			let remainingTime = duration;
+
+			const updateCountdown = () => {
+				
+				if (remainingTime > 0) {
+					disableSendButton(remainingTime)
+                    remainingTime--;
+                } else {
+					clearInterval(intervalId);
+                    enableSendButton();
+                }
+				
+			};
+
+			const disableSendButton = (remainingTime) => {
+				obj.setAttribute("disabled", true);
+				obj.textContent = `重试中${remainingTime}秒`;
+				obj.style.backgroundColor = 'rgb(0 91 172 / 20%)';
+			};
+
+			const enableSendButton = () => {
+				obj.removeAttribute("disabled");
+				obj.style.backgroundColor = 'rgb(0 91 172 / 100%)';
+				obj.textContent = text;
+			};
+
+			updateCountdown();
+			const intervalId = setInterval(updateCountdown, 1000);
+
 		};
 
-		const sendInfo = () => {
-			curCount = count;
-			generateCode();
-			disableSendButton();
-			InterValObj = window.setInterval(setResetTime, 1000);
-		};
 
-		const generateCode = () => {
-			code = "";
-			for (let i = 0; i < codeLength; i++) {
-				code += parseInt(Math.random() * 9).toString();
-			}
-		};
-
-		const disableSendButton = () => {
-			const sendCodeButton = document.querySelector("#SendCode");
-			sendCodeButton.setAttribute("disabled", true);
-			sendCodeButton.textContent = `重试中${curCount}`;
-			sendCodeButton.style.backgroundColor = 'rgb(0 91 172 / 20%)';
-		};
-
-		const enableSendButton = () => {
-			const sendCodeButton = document.querySelector("#SendCode");
-			sendCodeButton.removeAttribute("disabled");
-			sendCodeButton.textContent = '获取验证码';
-		};
-
-		const setResetTime = () => {
-			if (curCount === 0) {
-				clearInterval(InterValObj);
-				enableSendButton();
-				code = "";
-			} else {
-				curCount--;
-				updateSendButtonText();
-			}
-		}
-
-		const updateSendButtonText = () => {
-			const sendCodeButton = document.querySelector("#SendCode");
-			sendCodeButton.textContent = `请稍后重试${curCount}`;
-			sendCodeButton.style.backgroundColor = 'rgb(0 91 172 / 20%)';
-		};
 	</script>
 </body>
 </html>
